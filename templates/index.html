@@ -2,8 +2,32 @@
 <html>
     <p>University Rate Prediction</p>
     <form method="post">
-        GPA <input type="text" name="title" autocomplete="off" required>
-        Recommendation Letter <input type="text" name="year" autocomplete="off" required>
-        <input class="btn" type="submit" name="submit" value="Choose">
+        GPA: <input type="text" name="title" autocomplete="off" required><br>
+
+        TOEFL: <input type="text" name="title" autocomplete="off" required><br>
+
+        University: <form>
+        <select name = "university">
+        <option value = "jhu">Johns Hopkins University</option>
+        <option value = "ucb">University of California, Berkerly</option>
+        <option value = "ucla">University of California, Los Angeles</option>
+        </select></form><br>
+
+        PS and Recommendation Letter Strength: <form>
+            <select name = "ps_rl">
+                <option value = "5">Very Strong</option>
+                <option value = "4">Strong</option>
+                <option value = "3">Medium</option>
+                <option value = "2">Not So Competitive</option>
+                <option value = "1">Boring Paper Work</option>
+            </select></form><br>
+
+        Research Experience: <form>
+        <select name = "research_experience">
+        <option value = "Yes">Yes</option>
+        <option value = "No">No</option>
+        </select></form><br>
+
+        <input class="btn" type="submit" name="submit" value="Predict">
     </form>
 </html>
