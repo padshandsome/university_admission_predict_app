@@ -3,40 +3,44 @@
     <head>
         <style>
             body {
-                background-color: lightblue;  
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('../static/img/JHU_background_1.jpeg') no-repeat 0% 20%/ cover;  
             }
+            .item{color : aliceblue}
         </style>
     </head>
-
-    <h1>University Admission Prediction</h1>
     
-     <p>GPA: <input type="text" name="title" autocomplete="off" required><br></p>
 
-        TOEFL: <input type="text" name="title" autocomplete="off" required><br>
-
-        University: <form>
+    <h1  class ='item'>University Admission Prediction</h1>
+    <div>
+        <form action="/ChoosingProcess" method="post">
+        <p><span class='item'>GPA: </span><input type="text" autocomplete="off" name="GPA" required><br></p>
+        <p><span class='item'>GRE: </span><input type="text" autocomplete="off" name="GRE" required><br></p>
+        <p><span class='item'>TOEFL: </span><input type="text" utocomplete="off" name='TOEFL' required><br></p>
+        <p><span class='item'>University Ranking From US News: </span>
         <select name = "university">
-        <option value = "jhu">Johns Hopkins University</option>
-        <option value = "ucb">University of California, Berkerly</option>
-        <option value = "ucla">University of California, Los Angeles</option>
-        </select></form><br>
-
-        PS and Recommendation Letter Strength: <form>
-            <select name = "ps_rl">
-                <option value = "5">Very Strong</option>
-                <option value = "4">Strong</option>
-                <option value = "3">Medium</option>
-                <option value = "2">Not So Competitive</option>
-                <option value = "1">Boring Paper Work</option>
-            </select></form><br>
-
-        Research Experience: <form>
+            <option value = "5">1-20</option> 
+            <option value = "4">20-40</option>
+            <option value = "3">40-60</option>
+            <option value = "2">60-80</option>
+            <option value = "1">>80</option>
+        </select><br></p>
+        <p><span class='item'>PS and Recommendation Letter Strength: </span>
+        <select name = "ps_rl">
+            <option value = "5">Very Strong</option>
+            <option value = "4">Strong</option>
+            <option value = "3">Medium</option>
+            <option value = "2">Not So Competitive</option>
+            <option value = "1">Boring Paper Work</option>
+        </select><br></p>
+        <p><span class='item'>Research Experience: </span>
         <select name = "research_experience">
-        <option value = "Yes">Yes</option>
-        <option value = "No">No</option>
-        </select></form><br>
-
-    <form method="post">
+            <option value = "Yes">Yes</option>
+            <option value = "No">No</option>
+        </select><br></p>
+                
         <input class="btn" type="submit" name="submit" value="Predict">
-    </form>
+        </form>
+    </div>
+    
+    
 </html>
