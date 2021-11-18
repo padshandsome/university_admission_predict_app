@@ -1,6 +1,8 @@
 # university_admission_predict_server
-test link:https://seraphic-vertex-332101.ue.r.appspot.com/index
 google cloud app, predict your university admission rate
+
+test link:https://seraphic-vertex-332101.ue.r.appspot.com/index
+
 
 ## to-dos:
 1. add model
