@@ -42,6 +42,5 @@ def ChoosingProcess(GPA,TOEFL,research,university_rank,recommendation_strength):
         chance_of_admit=GPA*10+TOEFL*5+research+university_rank+recommendation_strength
         return chance_of_admit
                  
-
 if __name__ == '__main__':
     app.run(port=8080, debug=True)

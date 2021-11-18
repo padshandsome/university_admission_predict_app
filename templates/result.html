@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <p>Admission Rate</p>
-    Your admission rate will be {{data}}%.
-    Good for you! 
-    <form method="post">
-        <input class="btn" type="submit" name="submit" value="back">
-    </form>
+    <head>
+        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/resultstyle.css') }}" >
+    </head>
+    <div>
+        <div class="bg bg-blur"></div>
+        <div class="content content-front-2">
+            <p>Admission Rate</p>
+            Your admission rate will be {{data}}%.
+            Good for you! 
+            <form method="post">
+                <input class="btn btn-hero" type="submit" name="submit" value="back">
+            </form>
+        </div>
+    </div>
+   
 </html>
