@@ -8,8 +8,11 @@ test link:https://seraphic-vertex-332101.ue.r.appspot.com/index
 There are several things that need to be done in the future:
 
 1.change the font. ugly font right now.
+
 2. hovering tips are not available, needs to be finished later.
+
 3. recommendation for results.
+
 4. documentations.
 
 
