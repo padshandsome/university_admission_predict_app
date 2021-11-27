@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/indexstyle.css') }}" >
-    </head>
-    <body>
-        <div>
-            <div class="bg bg-blur"></div>
-            <div class="content content-front-1"><h1  class ="item">University Admission Prediction</h1></div>
-            <div class="content content-front-2">
-                    <form action="/result" method="get">
-                    <p><span class='item'>GPA: </span><input type="text" autocomplete="off" name="GPA" required><br></p>
-                    <p><span class='item'>GRE: </span><input type="text" autocomplete="off" name="GRE" required><br></p>
-                    <p><span class='item'>TOEFL: </span><input type="text" utocomplete="off" name='TOEFL' required><br></p>
-                    <p><span class='item'>University Ranking From US News: </span>
-                    <select name = "university">
-                        <option value = "5">1-20</option> 
-                        <option value = "4">20-40</option>
-                        <option value = "3">40-60</option>
-                        <option value = "2">60-80</option>
-                        <option value = "1">>80</option>
-                    </select><br></p>
-                    <p><span class='item'>PS and Recommendation Letter Strength: </span>
-                    <select name = "ps_rl">
-                        <option value = "5">Very Strong</option>
-                        <option value = "4">Strong</option>
-                        <option value = "3">Medium</option>
-                        <option value = "2">Not So Competitive</option>
-                        <option value = "1">Boring Paper Work</option>
-                    </select><br></p>
-                    <p><span class='item'>Research Experience: </span>
-                    <select name = "research_experience">
-                        <option value = "Yes">Yes</option>
-                        <option value = "No">No</option>
-                    </select><br></p>
-                            
-                    <input class="btn btn-hero" type="submit" name="submit" value="Predict">
-                    </form>
-            </div> 
-            </div>
-    
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainstyle.css') }}" >
+    <!-- <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainstyle.css') }}" > -->
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="rolling_pictures">
+            <marquee behavior="alternate" contenteditable="true" onMouseOut="this.start()" onMouseOver="this.stop()"> 
+                <img src="{{ url_for('static',filename='styles/school1.png') }}" width="550" height="320" alt="School 1">
+                <img src="{{ url_for('static',filename='styles/school2.png') }}" width="550" height="320" alt="School 2">
+                <img src="{{ url_for('static',filename='styles/school3.png') }}" width="550" height="320" alt="School 3">
+                <img src="{{ url_for('static',filename='styles/school4.png') }}" width="550" height="320" alt="School 4">
+                <img src="{{ url_for('static',filename='styles/school5.png') }}" width="550" height="320" alt="School 5">
+                </marquee>
+            <p class="welcome">Welcome to the upcoming graduate student!<p>
         </div>
-    </body>
-   
+
+        
+    </div>
+    
+    <div class = "introduction">
+        <p>You have done a great job and next step, leave it to us!<br>
+            We are here to help you find the best graduate school for you.<br>
+            Click the box below and type in your grades, <br>
+            we will help you predict your chances of admission based on the admission data of previous years.<br> 
+            
+            Our goal is to use data to make the best decision.<br>
+            </p>
+    </div>
+
+    <form action="" method="post">
+        <input class="btn btn-hero" type="submit" name="submit" value="Begin Prediction">
+    </form>
+        
+    
+
+    <div class="details">
+        <p>View the details of the admission
+            data authorized by schools
+           </p>
+           <p>
+               hyperlink:UCLA
+               <!-- needs to add -->
+           </p>
+    </div>
     
     
-    
+</body>
 </html>
