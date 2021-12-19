@@ -14,31 +14,24 @@
                             <option value = "UCLA">UCLA</option>
                         </select><br>
                     </p>
-
-                    <p><span class='item' id='gpa'>GPA: </span><input type="text" autocomplete="off" name="GPA" required placeholder="3.3"><br></p>
-                   
-                    <p><span class='item'>GRE: </span><input type="text" autocomplete="off" name="GRE" required placeholder="310"><br></p>
-                    
-                    <p><span class='item'>TOEFL: </span><input type="text" utocomplete="off" name='TOEFL' required placeholder="90"><br></p>
-                    
+                    <p><span class='item'>GRE: </span><input type="text" autocomplete="off" name="GRE" required placeholder="310" oninput="if(value>340)value=340;if(value<0)value=260"><br></p>
+                    <p><span class='item'>TOEFL: </span><input type="text" autocomplete="off" name='TOEFL' required placeholder="90" oninput="if(value>120)value=120;if(value<0)value=0"><br></p>
                     <p><span class='item'>University Ranking From US News: </span>
-                    <select name = "university">
-                        <option value = "5">1-20</option> 
-                        <option value = "4">20-40</option>
-                        <option value = "3">40-60</option>
-                        <option value = "2">60-80</option>
-                        <option value = "1">>80</option>
-                    </select><br></p>
-                   
+                        <select name = "university">
+                            <option value = "5">1-20</option> 
+                            <option value = "4">20-40</option>
+                            <option value = "3">40-60</option>
+                            <option value = "2">60-80</option>
+                            <option value = "1">>80</option>
+                        </select><br></p>
                     <p><span class='item'>PS  Strength: </span>
-                    <select name = "ps">
-                        <option value = "5">Very Strong</option>
-                        <option value = "4">Strong</option>
-                        <option value = "3">Medium</option>
-                        <option value = "2">Not So Competitive</option>
-                        <option value = "1">Boring Paper Work</option>
-                    </select><br></p>
-
+                        <select name = "ps">
+                            <option value = "5">Very Strong</option>
+                            <option value = "4">Strong</option>
+                            <option value = "3">Medium</option>
+                            <option value = "2">Not So Competitive</option>
+                            <option value = "1">Boring Paper Work</option>
+                        </select><br></p>
                     <p><span class='item'>Recommendation Letter Strength: </span>
                         <select name = "rl">
                             <option value = "5">Very Strong</option>
@@ -47,6 +40,9 @@
                             <option value = "2">Not So Competitive</option>
                             <option value = "1">Boring Paper Work</option>
                         </select><br></p>
+                    <p><span class='item' id='gpa'>GPA: </span><input type="text" autocomplete="off" name="GPA" required placeholder="7" oninput="if(value>10)value=10;if(value<0)value=0"><br></p>
+                   
+                    
                     
                     <p><span class='item'>Research Experience: </span>
                     <select name = "research_experience">
@@ -58,15 +54,9 @@
                     </form>
 
             </div>
-            </div>
-           
-           
         </div>
+           
     </body>
-   <script>
-
-   </script>
-    
     
     
 </html>
