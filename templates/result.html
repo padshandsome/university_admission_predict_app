@@ -1,21 +1,108 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/resultstyle.css') }}" >
-    </head>
-    <div>
-        <div class="bg bg-blur"></div>
-        <div class="content content-front-2">
-            <p>Admission Rate</p>
-            According to your historical performance, 
-your admission chances of being selected by UCLA are {{data}}%. 
-Good for you! Don‘t be discouraged, and please keep working hard, 
-Since all the people who compete with you are working hard. 
-If you want to continue to improve your competitive advantage, we have some advices for you: 
+        <!-- <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/resultstyle.css')}}" > -->
+        <style>
+            
+            .bg{
+                background: url('/static/styles/1.jpg');
+                height: 1400px;
+                text-align: center;
+                line-height:700px;
+            }
+            .bg-blur{
+                float: left;
+                width: 100%;
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size:cover;
+                -webkit-filter:blur(10px);
+                -moz-filter:blur(10px);
+                -o-filter:blur(10px);
+                -ms-filter:blur(10px);
+                filter:blur(3px);
+            }
+           
+            .mainResult{
+                text-align: center;
+                color: Black;
+                font-size:25px;
+                position: absolute;
+                font-weight: bold;
+                top: 30px;
+                width:800px;
+                left: 230px;
+            }
+            .advice{
+                text-align: left;
+                color: rgb(255, 255, 255);
+                font-size:25px;
+                position: absolute;
+                font-weight: bold;
+                top: 180px;
+                width:800px;
+                left: 200px;
+            }
+            .btn{
+                text-align: center;
+                position:absolute;
+                top: 50px;
+                left:50px;
+            }
+            .btn-hero{
+                font-family: "Roboto", sans-serif;
+                text-transform: uppercase;
+                background:transparent;
+                color:#222;
+                letter-spacing: var(--spacing);
+                display: inline-block;
+                font-weight: 700;
+                transition: all 0.3s linear;;
+                border: 2px solid #222;
+                cursor: pointer;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+                border-radius: 0.25rem;
+                font-size: 1rem;
+                padding: 0.75rem 1.25rem;
+            }
+            .btn-hero:hover{
+                color: #fff;
+                background: #222;
+            }
 
-            <form method="post">
-                <input class="btn btn-hero" type="submit" name="submit" value="back">
-            </form>
-        </div>
+   
+
+        </style>
+    </head>
+    <body>
+    <div class="bg bg-blur"></div>
+    <div class="mainResult">
+        According to your historical performance, 
+        your admission chances of being selected by UCLA is <br>
+        <b>{{chances}}</b>. <br>
+        Everyone can see your efforts, and please keep working hard.<br>
+        If you want to continue improving your competitiveness, based on our analysis, we have some personalized advices for you:         
     </div>
+    
+    <div class="advice">
+         <h3>{{TOEFLAdvice.head}}</h3>
+         {{TOEFLAdvice.main}}
+         {{TOEFLAdvice.link1}}
+         {{TOEFLAdvice.link2}}
+         <h3>{{SOPAdvice.head}}</h3>
+         {{SOPAdvice.main}}
+         {{SOPAdvice.link1}}
+         {{SOPAdvice.link2}}
+         <h3>{{ResearchAdvice.head}}</h3>
+         {{ResearchAdvice.main}}
+         {{ResearchAdvice.link1}}
+         {{ResearchAdvice.link2}}
+         <h3>{{RecommendationAdvice.head}}</h3>
+         {{RecommendationAdvice.main}}
+    </div>
+    <div> <form method="post"><input class="btn btn-hero" type="submit" name="submit" value="Back"></form>
+    </div>
+
+</body>
 </html>
+
