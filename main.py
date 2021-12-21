@@ -77,12 +77,14 @@ def result():
             # RecommendationAdvice['head'] = "The Strength of Letter of Recommendation:"
             # RecommendationAdvice['main'] = " Your Recommendation letter is not strong enough to persuade the school to admit you. You may persuade your professor to rewrite the letter with more words of praises, or try to find another professor. "
       
-        
+
         return render_template('result.html', chances = chances, TOEFL = TOEFL, SOP = personal_statement_strength, RS = research, RM=recommendation_strength, TOEFLAdvice = TOEFLAdvice, SOPAdvice = SOPAdvice, ResearchAdvice= ResearchAdvice,RecommendationAdvice=RecommendationAdvice)
 
 
 def ChoosingProcess(predict_features):
         #Predict the probability of admit
+        
+
         model1 = model()
         model1.load()
         chance_of_admit = model1.predict(predict_features.reshape(1,-1))
